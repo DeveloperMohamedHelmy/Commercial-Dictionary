@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="#FAFAFA"
+    android:padding="1dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:padding="5dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you sure you want to delete this from History ? "
+            android:textColor="#676767"
+            android:textSize="18dp"
+            android:id="@+id/deleteTextView" />
+
+        <LinearLayout
+            android:background="#FAFAFA"
+            android:layout_marginTop="13dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="                                           " />
+
+            <Button
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:background="#FAFAFA"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/deleteButton"
+                android:textColor="#FA5551"
+                android:layout_marginRight="5dp"
+                android:text="Delete"
+
+
+                />
+
+
+            <Button
+
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:background="#FAFAFA"
+                android:textColor="#FA5551"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/cancel"
+                android:text="cancel"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

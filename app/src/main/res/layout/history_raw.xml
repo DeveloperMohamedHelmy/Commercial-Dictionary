@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/historyLayout"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:layout_weight="8"
+            android:background="#dcdcdc"
+            android:orientation="vertical"
+            tools:ignore="NewApi"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
+            <TextView
+
+                android:id="@+id/FROM_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#d5d5d5"
+                android:padding="5dp"
+                android:text="English"
+                android:textColor="#000"
+                android:textIsSelectable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+            <TextView
+
+                android:id="@+id/TO_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#d5d5d5"
+                android:padding="5dp"
+                android:text="Arabic"
+                android:textColor="#000"
+                android:textIsSelectable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+
+            <TextView
+
+                android:id="@+id/description_textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#d5d5d5"
+                android:minHeight="100dp"
+                android:padding="2dp"
+                android:text="Description"
+                android:textColor="#000"
+                android:textIsSelectable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="32dp"
+            android:layout_height="100dp"
+            android:layout_weight="3"
+            android:background="#d5d5d5"
+            tools:ignore="NewApi"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
+            <RelativeLayout
+
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:focusableInTouchMode="false">
+
+                <CheckBox
+
+                    android:id="@+id/favorite_checkBox"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/check_box_style_back"
+                    android:checked="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:descendantFocusability="blocksDescendants"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/empety"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/gradient"
+        android:padding="5dp"
+        android:text=" "
+        android:textColor="#000"
+        android:textIsSelectable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/geadient2"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:weightSum="100"
+
+    android:windowSoftInputMode="adjustNothing"
+    android:isScrollContainer="false">
+
+
+    <LinearLayout
+        android:isScrollContainer="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:isScrollContainer="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <AutoCompleteTextView
+                android:id="@+id/fromEditText"
+                style="@style/editText_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/edit_text_bg"
+                android:hint="أدخل الكلمة باللغة العربية أو الإنجليزية"
+                android:isScrollContainer="false"
+
+
+                />
+
+            <EditText
+                android:id="@+id/toEditText"
+                style="@style/editText_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:editable="false"
+                android:background="@drawable/edit_text_bg"
+                android:isScrollContainer="false"
+                android:visibility="gone"
+                android:windowSoftInputMode="adjustNothing"/>
+
+            <EditText
+                android:editable="false"
+                android:id="@+id/DescEditText"
+                style="@style/editText_style"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:background="@drawable/edit_text_bg"
+                android:isScrollContainer="false"
+
+                android:windowSoftInputMode="adjustNothing"
+
+                />
+            <Button
+                android:windowSoftInputMode="adjustNothing"
+                android:id="@+id/translateButton"
+                style="@style/btn_translatStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/translatebtn_background"
+                android:isScrollContainer="false"
+                android:layout_marginBottom="4dp"
+                android:text="Translate" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/historyLayoutList"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_weight="80"
+        android:isScrollContainer="false"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:textSize="18dp"
+            android:text="History"
+            android:id="@+id/historyTextView"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:background="@drawable/history_background"
+            android:textColor="#4d4d4d" />
+
+        <ListView
+            android:scrollbars="none"
+            android:padding="3dp"
+            android:windowSoftInputMode="adjustNothing"
+            android:background="@drawable/list_background"
+            android:id="@+id/history_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:isScrollContainer="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:descendantFocusability="blocksDescendants"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

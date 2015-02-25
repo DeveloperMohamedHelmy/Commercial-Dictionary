@@ -1,0 +1,110 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:orientation="vertical"
+    android:background="@drawable/geadient2">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/upcor"
+            android:weightSum="10"
+            >
+
+            <TextView
+
+                android:textColor="#272727"
+                android:padding="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="English Word"
+                android:id="@+id/EN_word"
+                android:layout_weight="9"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_lock_silent_mode_off"
+                android:layout_weight="1"
+                android:id="@+id/FROM_speak"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FAFAFA"
+            android:weightSum="10">
+
+            <TextView
+
+                android:textColor="#272727"
+                android:padding="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Arabic Word"
+                android:id="@+id/AR_word"
+                android:layout_weight="9"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_lock_silent_mode_off"
+                android:layout_weight="1"
+                android:id="@+id/TO_speak"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/downcorner"
+            android:weightSum="20">
+
+            <TextView
+
+                android:textColor="#272727"
+                android:padding="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="this is Description of the word translate by the program and this good thing for mr fouad abou esma3iel "
+                android:id="@+id/DESC_word"
+                android:layout_weight="19"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_lock_silent_mode_off"
+                android:layout_weight="1"
+                android:id="@+id/DESC_speak"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#d5d5d5"
+            android:weightSum="100">
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
