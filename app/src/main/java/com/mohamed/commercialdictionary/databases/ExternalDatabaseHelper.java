@@ -130,29 +130,6 @@ public class ExternalDatabaseHelper extends SQLiteOpenHelper{
         }
     }
 
-    public String[] getAllArabicColumn() {
-        db = getReadableDatabase();
-        String[] columns = {"ar"};
-        Cursor cursor = db.query("accounting",columns,null,null,null,null,null);
-        if(cursor.getCount() >0)
-        {
-            String[] str = new String[cursor.getCount()];
-            int i = 0;
-
-            while (cursor.moveToNext())
-            {
-                str[i] = cursor.getString(cursor.getColumnIndex("ar"));
-                i++;
-            }
-            return str;
-        }
-        else
-        {
-            return new String[] {};
-        }
-    }
-
-
 
 
 

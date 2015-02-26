@@ -198,27 +198,15 @@ public class HomeFragment extends Fragment {
         }
         return false;
     }
-    private void autoComplete(){
-        String from = fromEditText.getText().toString();
-        Boolean isArabic = isProbablyArabic(from);
-        if (isArabic){
-            String[] arColumn = databaseHelper.getAllArabicColumn();
-            for(int i = 0; i < arColumn.length; i++)
-            {
-                Log.i(this.toString(), arColumn[i]);
-            }
-            ArrayAdapter<String> autoCompleteAdapter = new ArrayAdapter<String>(getActivity(),R.layout.auto_complete,arColumn);
-            fromEditText.setAdapter(autoCompleteAdapter);
-        }else {
-            String[] enColumn = databaseHelper.getAllEnglishColumn();
-            for(int i = 0; i < enColumn.length; i++)
-            {
-                Log.i(this.toString(), enColumn[i]);
-            }
-            ArrayAdapter<String> autoCompleteAdapter = new ArrayAdapter<String>(getActivity(),R.layout.auto_complete,enColumn);
-            fromEditText.setAdapter(autoCompleteAdapter);
-        }
 
+    private void autoComplete(){
+        String[] enColumn = databaseHelper.getAllEnglishColumn();
+        for(int i = 0; i < enColumn.length; i++)
+        {
+            Log.i(this.toString(), enColumn[i]);
+        }
+        ArrayAdapter<String> autoCompleteAdapter = new ArrayAdapter<String>(getActivity(),R.layout.auto_complete,enColumn);
+        fromEditText.setAdapter(autoCompleteAdapter);
     }
 
 
