@@ -92,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:textSize="18dp"
-            android:text="History"
+            android:text="My History"
             android:id="@+id/historyTextView"
             android:padding="5dp"
             android:textStyle="bold"

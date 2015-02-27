@@ -9,15 +9,14 @@
 
     <LinearLayout
         android:padding="5dp"
-
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Are you sure you want to delete this from History ? "
+            android:text="Remove this from My History ?"
             android:textColor="#676767"
             android:textSize="18dp"
             android:id="@+id/deleteTextView" />
@@ -25,42 +24,36 @@
         <LinearLayout
             android:background="#FAFAFA"
             android:layout_marginTop="13dp"
-
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="100">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="                                           " />
+                android:text="                        "
+                android:layout_weight="40"/>
 
             <Button
-                android:shadowDx="0"
-                android:shadowDy="0"
                 android:background="#FAFAFA"
-
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/deleteButton"
                 android:textColor="#FA5551"
-                android:layout_marginRight="5dp"
-                android:text="Delete"
-
-
+                android:id="@+id/cancel"
+                android:text="Cancel"
+                android:layout_weight="30"
                 />
 
 
             <Button
-
-                android:shadowDx="0"
-                android:shadowDy="0"
                 android:background="#FAFAFA"
                 android:textColor="#FA5551"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/cancel"
-                android:text="cancel"
+                android:id="@+id/deleteButton"
+                android:text="OK"
+                android:layout_weight="30"
                 />
 
         </LinearLayout>

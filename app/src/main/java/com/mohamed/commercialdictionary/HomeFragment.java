@@ -80,6 +80,9 @@ public class HomeFragment extends Fragment {
                 dialog.setContentView(R.layout.delete_dialog);
                 Button deleteButton = (Button) dialog.findViewById(R.id.deleteButton);
                 Button cancelButton = (Button) dialog.findViewById(R.id.cancel);
+                TextView deleteTextView = (TextView) dialog.findViewById(R.id.deleteTextView);
+                final String from = ((TextView) view.findViewById(R.id.FROM_textView)).getText().toString();
+                deleteTextView.setText("Remove '"+from+ "' from My History ?");
                 dialog.show();
                 cancelButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -90,7 +93,7 @@ public class HomeFragment extends Fragment {
                 deleteButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String[] FromArgs = {((TextView) view.findViewById(R.id.FROM_textView)).getText().toString()};
+                        String[] FromArgs = {from};
                         historyDatabaseHelper.deleteRaw(FromArgs);
                         refreshHistoryList();
                         dialog.cancel();
