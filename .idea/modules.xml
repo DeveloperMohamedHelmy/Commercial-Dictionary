@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CommercialDictionary.iml" filepath="$PROJECT_DIR$/CommercialDictionary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Commercial-Dictionary.iml" filepath="$PROJECT_DIR$/Commercial-Dictionary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

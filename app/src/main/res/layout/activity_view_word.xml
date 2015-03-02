@@ -31,10 +31,9 @@
                 android:id="@+id/EN_word"
                 android:layout_weight="9"/>
             <ImageButton
-                android:layout_width="wrap_content"
+                android:layout_width="68dp"
                 android:layout_height="wrap_content"
                 android:src="@android:drawable/ic_lock_silent_mode_off"
-                android:layout_weight="1"
                 android:id="@+id/FROM_speak"/>
 
         </LinearLayout>
