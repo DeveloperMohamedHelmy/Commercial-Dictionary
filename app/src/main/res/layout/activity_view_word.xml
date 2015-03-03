@@ -2,9 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="none"
+    android:background="@drawable/geadient2"
     android:orientation="vertical"
-    android:background="@drawable/geadient2">
+    android:scrollbars="none">
+
     <LinearLayout
 
         android:layout_width="match_parent"
@@ -12,99 +13,110 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_marginTop="30dp"
+            android:padding="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
             android:background="@drawable/upcor"
-
+            android:orientation="horizontal"
+            android:weightSum="10"
             >
 
-            <TextView
-                android:width="315dp"
-                android:textColor="#272727"
-                android:padding="13dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="English Word"
-                android:id="@+id/EN_word"
-           />
+
+
+
+                <TextView
+                    android:layout_weight="3"
+                    android:id="@+id/EN_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="315dp"
+                    android:padding="13dp"
+                    android:text="English Word"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#272727" />
+
+
 
 
             <Button
 
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@mipmap/mic"
-                android:id="@+id/FROM_speak"/>
-
+                android:layout_weight="7"
+                android:id="@+id/FROM_speak"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@mipmap/mic" />
         </LinearLayout>
 
         <LinearLayout
+            android:padding="4dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:background="#FAFAFA"
- >
+            android:orientation="horizontal"
+            android:weightSum="10">
+
 
             <TextView
-                android:width="315dp"
-                android:textColor="#272727"
-                android:padding="13dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Arabic Word"
+                android:layout_weight="3"
                 android:id="@+id/AR_word"
- />
-
-            <Button
-
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@mipmap/mic"
-
-                android:id="@+id/TO_speak"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/downcorner"
-            android:weightSum="20">
-
-            <TextView
-                android:width="315dp"
-                android:textColor="#272727"
-                android:padding="13dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:width="315dp"
+                android:padding="13dp"
+                android:text="Arabic Word"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="this is Description of the word translate by the program and this good thing for mr fouad abou esma3iel "
-                android:id="@+id/DESC_word"
-               />
+                android:textColor="#272727" />
+
+
 
             <Button
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@mipmap/mic"
+android:layout_weight="7"
+                android:id="@+id/TO_speak"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
 
+                android:background="@mipmap/mic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/downcorner"
+            android:orientation="horizontal"
+            android:weightSum="10"
+        >
+
+
+            <TextView
+                android:layout_weight="3"
+                android:id="@+id/DESC_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="315dp"
+                android:padding="10dp"
+                android:text="this is Description of the word translate by the program and this good thing for mr fouad abou esma3iel "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#272727" />
+
+
+
+            <Button
+                android:layout_weight="7"
                 android:id="@+id/DESC_speak"
-                />
+                android:layout_width="24dp"
+                android:layout_height="24dp"
 
-
+                android:background="@mipmap/mic" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:background="#d5d5d5"
-            android:weightSum="100">
+            android:orientation="horizontal">
 
 
         </LinearLayout>
