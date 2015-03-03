@@ -22,19 +22,11 @@
             android:textSize="18dp"
             android:id="@+id/deleteTextView" />
 
-        <LinearLayout
+        <RelativeLayout
             android:background="#FAFAFA"
             android:layout_marginTop="13dp"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal"
-            android:weightSum="100">
-
-            <Space
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:ignore="NewApi"
-                android:layout_weight="40"/>
+            android:layout_height="40dp">
 
             <Button
                 android:background="#FAFAFA"
@@ -43,8 +35,9 @@
                 android:textColor="#FA5551"
                 android:id="@+id/cancel"
                 android:text="CANCEL"
-                android:layout_weight="30"
-                />
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/deleteButton"
+                android:layout_toStartOf="@+id/deleteButton" />
 
 
             <Button
@@ -54,9 +47,9 @@
                 android:layout_height="match_parent"
                 android:id="@+id/deleteButton"
                 android:text="OK"
-                android:layout_weight="30"
+                android:layout_alignParentRight="true"
                 />
 
-        </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 </LinearLayout>
