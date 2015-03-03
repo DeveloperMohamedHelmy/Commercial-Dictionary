@@ -26,7 +26,7 @@
 
 
                 <TextView
-                    android:layout_weight="3"
+                    android:layout_weight="5"
                     android:id="@+id/EN_word"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
 
             <Button
 
-                android:layout_weight="7"
+                android:layout_weight="6"
                 android:id="@+id/FROM_speak"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
@@ -58,7 +58,7 @@
 
 
             <TextView
-                android:layout_weight="3"
+                android:layout_weight="5"
                 android:id="@+id/AR_word"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
 
 
             <Button
-android:layout_weight="7"
+android:layout_weight="6"
                 android:id="@+id/TO_speak"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
@@ -91,7 +91,7 @@ android:layout_weight="7"
 
 
             <TextView
-                android:layout_weight="3"
+                android:layout_weight="5"
                 android:id="@+id/DESC_word"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -104,7 +104,7 @@ android:layout_weight="7"
 
 
             <Button
-                android:layout_weight="7"
+                android:layout_weight="6"
                 android:id="@+id/DESC_speak"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
