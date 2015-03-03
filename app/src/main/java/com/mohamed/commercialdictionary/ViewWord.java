@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,7 +18,7 @@ import java.util.Locale;
 
 public class ViewWord extends ActionBarActivity {
 
-    ImageButton fromSpeak , toSpeak , descSpeak ;
+    Button fromSpeak , toSpeak , descSpeak ;
     TextView FROM_word , TO_word , DESC_word ;
     String FromText , ToText , descText ;
     TextToSpeech tts ;
@@ -29,9 +30,9 @@ public class ViewWord extends ActionBarActivity {
         FROM_word = (TextView) findViewById(R.id.EN_word);
         TO_word = (TextView) findViewById(R.id.AR_word);
         DESC_word = (TextView) findViewById(R.id.DESC_word);
-        fromSpeak = (ImageButton) findViewById(R.id.FROM_speak);
-        toSpeak = (ImageButton) findViewById(R.id.TO_speak);
-        descSpeak = (ImageButton) findViewById(R.id.DESC_speak);
+        fromSpeak = (Button) findViewById(R.id.FROM_speak);
+        toSpeak = (Button) findViewById(R.id.TO_speak);
+        descSpeak = (Button) findViewById(R.id.DESC_speak);
         Intent intent = getIntent();
         FromText = intent.getStringExtra("FromText");
         ToText = intent.getStringExtra("ToText");

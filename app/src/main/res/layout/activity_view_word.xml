@@ -21,7 +21,7 @@
             >
 
             <TextView
-                android:width="290dp"
+                android:width="315dp"
                 android:textColor="#272727"
                 android:padding="13dp"
                 android:layout_width="wrap_content"
@@ -32,11 +32,11 @@
            />
 
 
-            <ImageButton
+            <Button
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/mic"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@mipmap/mic"
                 android:id="@+id/FROM_speak"/>
 
         </LinearLayout>
@@ -49,7 +49,7 @@
  >
 
             <TextView
-                android:width="290dp"
+                android:width="315dp"
                 android:textColor="#272727"
                 android:padding="13dp"
                 android:layout_width="wrap_content"
@@ -59,11 +59,11 @@
                 android:id="@+id/AR_word"
  />
 
-            <ImageButton
+            <Button
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/mic"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@mipmap/mic"
 
                 android:id="@+id/TO_speak"/>
 
@@ -78,7 +78,7 @@
             android:weightSum="20">
 
             <TextView
-                android:width="290dp"
+                android:width="315dp"
                 android:textColor="#272727"
                 android:padding="13dp"
                 android:layout_width="wrap_content"
@@ -88,10 +88,10 @@
                 android:id="@+id/DESC_word"
                />
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@mipmap/mic"
+            <Button
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@mipmap/mic"
 
                 android:id="@+id/DESC_speak"
                 />
