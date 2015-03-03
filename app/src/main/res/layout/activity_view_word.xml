@@ -5,121 +5,102 @@
     android:background="@drawable/geadient2"
     android:orientation="vertical"
     android:scrollbars="none">
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+    <!--the main layout -->
         <LinearLayout
-            android:padding="4dp"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/upcor"
-            android:orientation="horizontal"
-            android:weightSum="10"
-            >
-
-
-
-
+            android:orientation="vertical"     >
+            <!--the first row of english word-->
+            <LinearLayout
+                android:padding="5dp"
+                android:background="@drawable/upcor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                >
+             <TextView
+                 android:id="@+id/EN_word"
+                 android:layout_weight="98"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="English word"
+                 />
+            <Button
+                android:id="@+id/FROM_speak"
+                android:layout_weight="2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@mipmap/ic_volume_up_black_24dp"
+                />
+             </LinearLayout>
+            <!--the end of first row of english word-->
+            <!--the scond row of arabic word-->
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="#e3e3e3"
+                >
                 <TextView
-                    android:layout_weight="5"
-                    android:id="@+id/EN_word"
+                    android:id="@+id/AR_word"
+                    android:layout_weight="98"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:width="315dp"
-                    android:padding="13dp"
-                    android:text="English Word"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="#272727" />
-
-
-
-
-            <Button
-
-                android:layout_weight="6"
-                android:id="@+id/FROM_speak"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@mipmap/mic" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:padding="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FAFAFA"
-            android:orientation="horizontal"
-            android:weightSum="10">
-
-
-            <TextView
-                android:layout_weight="5"
-                android:id="@+id/AR_word"
-                android:layout_width="wrap_content"
+                    android:text="Arabic"
+                    />
+                <Button
+                    android:id="@+id/TO_speak"
+                    android:layout_weight="2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@mipmap/ic_volume_up_black_24dp"
+                    />
+            </LinearLayout>
+            <!--the end of scond row of arabic word-->
+            <!--the scond row of arabic word-->
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:width="315dp"
-                android:padding="13dp"
-                android:text="Arabic Word"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#272727" />
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="@drawable/downcorner"
+                >
+                <TextView
+                    android:id="@+id/DESC_word"
+                    android:layout_weight="98"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descripion"
+                    />
+                <Button
+                    android:id="@+id/DESC_speak"
+                    android:layout_weight="2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@mipmap/ic_volume_up_black_24dp"
+                    />
+            </LinearLayout>
+            <!--the end of scond row of arabic word-->
 
 
 
-            <Button
-android:layout_weight="6"
-                android:id="@+id/TO_speak"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-
-                android:background="@mipmap/mic" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:padding="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/downcorner"
-            android:orientation="horizontal"
-            android:weightSum="10"
-        >
-
-
-            <TextView
-                android:layout_weight="5"
-                android:id="@+id/DESC_word"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="315dp"
-                android:padding="10dp"
-                android:text="this is Description of the word translate by the program and this good thing for mr fouad abou esma3iel "
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="#272727" />
 
 
 
-            <Button
-                android:layout_weight="6"
-                android:id="@+id/DESC_speak"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-
-                android:background="@mipmap/mic" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#d5d5d5"
-            android:orientation="horizontal">
 
 
-        </LinearLayout>
-    </LinearLayout>
+
+
+
+
+            </LinearLayout>
+    <!--the end of main layout-->
+
+
 
 </ScrollView>
