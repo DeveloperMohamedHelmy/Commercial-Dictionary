@@ -31,7 +31,7 @@
             <Button
                 android:background="#FAFAFA"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:textColor="#FA5551"
                 android:id="@+id/cancel"
                 android:text="CANCEL"
@@ -44,7 +44,7 @@
                 android:background="#FAFAFA"
                 android:textColor="#FA5551"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/deleteButton"
                 android:text="OK"
                 android:layout_alignParentRight="true"
