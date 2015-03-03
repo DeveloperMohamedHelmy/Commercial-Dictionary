@@ -17,11 +17,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="@drawable/upcor"
-            android:weightSum="10"
+
             >
 
             <TextView
-
+                android:width="290dp"
                 android:textColor="#272727"
                 android:padding="13dp"
                 android:layout_width="wrap_content"
@@ -29,11 +29,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="English Word"
                 android:id="@+id/EN_word"
-                android:layout_weight="9"/>
+           />
+
+
             <ImageButton
-                android:layout_width="68dp"
+
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_lock_silent_mode_off"
+                android:src="@mipmap/mic"
                 android:id="@+id/FROM_speak"/>
 
         </LinearLayout>
@@ -43,10 +46,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="#FAFAFA"
-            android:weightSum="10">
+ >
 
             <TextView
-
+                android:width="290dp"
                 android:textColor="#272727"
                 android:padding="13dp"
                 android:layout_width="wrap_content"
@@ -54,13 +57,14 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Arabic Word"
                 android:id="@+id/AR_word"
-                android:layout_weight="9"/>
+ />
 
             <ImageButton
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@android:drawable/ic_lock_silent_mode_off"
-                android:layout_weight="1"
+                android:src="@mipmap/mic"
+
                 android:id="@+id/TO_speak"/>
 
         </LinearLayout>
@@ -74,7 +78,7 @@
             android:weightSum="20">
 
             <TextView
-
+                android:width="290dp"
                 android:textColor="#272727"
                 android:padding="13dp"
                 android:layout_width="wrap_content"
@@ -82,13 +86,13 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="this is Description of the word translate by the program and this good thing for mr fouad abou esma3iel "
                 android:id="@+id/DESC_word"
-                android:layout_weight="19"/>
+               />
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@android:drawable/ic_lock_silent_mode_off"
-                android:layout_weight="1"
+                android:src="@mipmap/mic"
+
                 android:id="@+id/DESC_speak"
                 />
 
