@@ -36,7 +36,7 @@
                 />
              </LinearLayout>
             <!--the end of first row of english word-->
-            <!--the scond row of arabic word-->
+            <!--the second row of arabic word-->
             <LinearLayout
                 android:padding="5dp"
                 android:layout_width="match_parent"
@@ -60,8 +60,8 @@
                     android:background="@mipmap/ic_volume_up_black_24dp"
                     />
             </LinearLayout>
-            <!--the end of scond row of arabic word-->
-            <!--the scond row of arabic word-->
+            <!--the end of second row of arabic word-->
+            <!--the second row of arabic word-->
             <LinearLayout
                 android:padding="5dp"
                 android:layout_width="match_parent"
@@ -85,7 +85,7 @@
                     android:background="@mipmap/ic_volume_up_black_24dp"
                     />
             </LinearLayout>
-            <!--the end of scond row of arabic word-->
+            <!--the end of second row of arabic word-->
 
 
 
