@@ -43,27 +43,16 @@ public class HistoryDatabaseHelper extends SQLiteOpenHelper{
     }
 
     // Adding new single History Raw
-    public void addHistoryRaw(String enValue, String arValue, String descValue) {
+    public void addHistoryRaw(String enValue, String arValue) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_FROM, enValue);
         values.put(KEY_TO, arValue);
-        values.put(KEY_DESC, descValue);
+       // values.put(KEY_DESC, descValue);
         // Inserting Row
         db.insert(TABLE_NAME, null, values);
         db.close(); // Closing database connection
     }
-
-    /*public void deletedRawIfIsFound(String[] descArgs) {
-        SQLiteDatabase db = getReadableDatabase();
-        String[] columns = {KEY_ID, KEY_FROM};
-        Cursor cursor = db.query(TABLE_NAME, columns, KEY_DESC + " = ?", descArgs, null, null, null);
-        if (cursor.moveToFirst()) {
-            // Deleting record if found
-            db.delete(TABLE_NAME, KEY_DESC +" = ?",descArgs);
-            db.close();
-        }
-    }*/
 
     public void deleteRaw(String[] FromArgs){
         SQLiteDatabase db = getReadableDatabase();

@@ -4,13 +4,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/geadient2"
     android:orientation="vertical"
-    android:scrollbars="none">
+    android:scrollbars="none"
+    android:fillViewport="false" >
     <!--the main layout -->
         <LinearLayout
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"     >
+            android:orientation="vertical" >
             <!--the first row of english word-->
             <LinearLayout
                 android:padding="5dp"
@@ -22,17 +23,21 @@
                 >
              <TextView
                  android:id="@+id/EN_word"
-                 android:layout_weight="98"
-                 android:layout_width="wrap_content"
+                 android:layout_weight="97"
+                 android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:text="English word"
+                 android:textColor="#9A28B1"
+                 android:layout_marginRight="10dp"
+                 android:textSize="20sp"
+                 android:layout_margin="5dp"
                  />
             <Button
-                android:id="@+id/FROM_speak"
-                android:layout_weight="2"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:background="@mipmap/ic_volume_up_black_24dp"
+                android:id="@+id/FROM_COPY"
+                android:layout_weight="3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/ic_copy_48"
                 />
              </LinearLayout>
             <!--the end of first row of english word-->
@@ -47,56 +52,23 @@
                 >
                 <TextView
                     android:id="@+id/AR_word"
-                    android:layout_weight="98"
-                    android:layout_width="wrap_content"
+                    android:layout_weight="97"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Arabic"
+                    android:textColor="#F8574F"
+                    android:textSize="20sp"
+                    android:layout_margin="5dp"
+                    android:layout_marginRight="10dp"
                     />
                 <Button
-                    android:id="@+id/TO_speak"
-                    android:layout_weight="2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:background="@mipmap/ic_volume_up_black_24dp"
+                    android:id="@+id/TO_COPY"
+                    android:layout_weight="3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@mipmap/ic_copy_48"
                     />
             </LinearLayout>
-            <!--the end of second row of arabic word-->
-            <!--the second row of arabic word-->
-            <LinearLayout
-                android:padding="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:background="@drawable/downcorner"
-                >
-                <TextView
-                    android:id="@+id/DESC_word"
-                    android:layout_weight="98"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Descripion"
-                    />
-                <Button
-                    android:id="@+id/DESC_speak"
-                    android:layout_weight="2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:background="@mipmap/ic_volume_up_black_24dp"
-                    />
-            </LinearLayout>
-            <!--the end of second row of arabic word-->
-
-
-
-
-
-
-
-
-
-
-
 
             </LinearLayout>
     <!--the end of main layout-->

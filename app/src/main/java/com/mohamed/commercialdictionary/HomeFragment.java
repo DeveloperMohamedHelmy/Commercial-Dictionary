@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
 
 
     AutoCompleteTextView fromEditText;
-    EditText toEditText, descEditText;
+    EditText toEditText;
     Button translateBtn;
     ListView historyListView;
     TextView historyTextView;
@@ -58,7 +58,6 @@ public class HomeFragment extends Fragment {
         final LinearLayout liner = (LinearLayout) getActivity().findViewById(R.id.historyLayoutList);
         fromEditText = (AutoCompleteTextView) getActivity().findViewById(R.id.fromEditText);
         toEditText = (EditText) getActivity().findViewById(R.id.toEditText);
-        descEditText = (EditText) getActivity().findViewById(R.id.DescEditText);
         translateBtn = (Button) getActivity().findViewById(R.id.translateButton);
         historyListView = (ListView) getActivity().findViewById(R.id.history_listView);
         historyTextView = (TextView) getActivity().findViewById(R.id.historyTextView);
@@ -112,11 +111,9 @@ public class HomeFragment extends Fragment {
                 Log.e("onInter", "Toast OnItemClickListener called  ... done ... #### ");
                 String FromText = ((TextView) view.findViewById(R.id.FROM_textView)).getText().toString();
                 String ToText = ((TextView) view.findViewById(R.id.TO_textView)).getText().toString();
-                String descText = ((TextView) view.findViewById(R.id.description_textView)).getText().toString();
                 Intent intent = new Intent(getActivity(), ViewWord.class);
                 intent.putExtra("FromText", FromText);
                 intent.putExtra("ToText", ToText);
-                intent.putExtra("descText", descText);
                 startActivity(intent);
             }
         });
@@ -127,36 +124,30 @@ public class HomeFragment extends Fragment {
                 databaseHelper.getReadableDatabase();
                 String from = fromEditText.getText().toString();
                 Boolean isArabic = isProbablyArabic(from);
-                String[] args = {fromEditText.getText().toString().toLowerCase()};
+                String[] args = {fromEditText.getText().toString()};
                 if (isArabic == true){
                     Cursor c = databaseHelper.getEnglishData(args);
                     if (c.moveToFirst()) {
                         toEditText.setText(c.getString(0));
-                        descEditText.setText(c.getString(2));
                     } else {
                         toEditText.setText("not found!");
-                        descEditText.setText("not found!");
                     }
                 }else{
                     Cursor c = databaseHelper.getArabicData(args);
                     if (c.moveToFirst()) {
                         toEditText.setText(c.getString(1));
-                        descEditText.setText(c.getString(2));
                     } else {
                         toEditText.setText("not found!");
-                        descEditText.setText("not found!");
                     }
 
                 }
                 String fText = fromEditText.getText().toString();
                 String tText = toEditText.getText().toString();
-                String dText = descEditText.getText().toString();
                 String[] FromArgs = {fText};
                 historyDatabaseHelper.deleteRaw(FromArgs);
-                historyDatabaseHelper.addHistoryRaw(fText, tText, dText);
+                historyDatabaseHelper.addHistoryRaw(fText, tText/*, dText*/);
                 refreshHistoryList();
                 toEditText.setVisibility(View.VISIBLE);
-                descEditText.setVisibility(View.VISIBLE);
                 hideKeyboard();
                 liner.setVisibility(View.INVISIBLE);
             }
@@ -167,7 +158,6 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 toEditText.setVisibility(View.GONE);
-                descEditText.setVisibility(View.GONE);
                 liner.setVisibility(View.VISIBLE);
             }
         });
@@ -188,7 +178,7 @@ public class HomeFragment extends Fragment {
 
     public void refreshHistoryList(){
         String[] from = {historyDatabaseHelper.KEY_FROM , historyDatabaseHelper.KEY_TO , historyDatabaseHelper.KEY_DESC};
-        int[] to = {R.id.FROM_textView, R.id.TO_textView, R.id.description_textView};
+        int[] to = {R.id.FROM_textView, R.id.TO_textView};
         Cursor cursor = historyDatabaseHelper.getData();
         SimpleCursorAdapter cursorAdapter = new SimpleCursorAdapter(getActivity(), R.layout.history_raw,cursor,from,to);
         historyListView.setAdapter(cursorAdapter);

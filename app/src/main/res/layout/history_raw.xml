@@ -18,8 +18,8 @@
         android:focusableInTouchMode="false">
 
         <LinearLayout
-            android:layout_width="180dp"
-            android:layout_height="100dp"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
             android:layout_weight="8"
             android:background="#dcdcdc"
             android:orientation="vertical"
@@ -36,7 +36,8 @@
                 android:background="#d5d5d5"
                 android:padding="5dp"
                 android:text="English"
-                android:textColor="#000"
+                android:textColor="#9A28B1"
+                android:textSize="20sp"
                 android:textIsSelectable="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false"/>
@@ -49,22 +50,8 @@
                 android:background="#d5d5d5"
                 android:padding="5dp"
                 android:text="Arabic"
-                android:textColor="#000"
-                android:textIsSelectable="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"/>
-
-
-            <TextView
-
-                android:id="@+id/description_textView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#d5d5d5"
-                android:minHeight="100dp"
-                android:padding="2dp"
-                android:text="Description"
-                android:textColor="#000"
+                android:textColor="#F8574F"
+                android:textSize="20sp"
                 android:textIsSelectable="false"
                 android:focusable="false"
                 android:focusableInTouchMode="false"/>

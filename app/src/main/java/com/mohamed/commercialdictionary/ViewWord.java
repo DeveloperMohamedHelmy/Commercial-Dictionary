@@ -1,6 +1,8 @@
 package com.mohamed.commercialdictionary;
 
 
+import android.annotation.SuppressLint;
+import android.content.ClipboardManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
@@ -18,9 +20,9 @@ import java.util.Locale;
 
 public class ViewWord extends ActionBarActivity {
 
-    Button fromSpeak , toSpeak , descSpeak ;
-    TextView FROM_word , TO_word , DESC_word ;
-    String FromText , ToText , descText ;
+    Button fromCopy , toCopy ;
+    TextView FROM_word , TO_word  ;
+    String FromText , ToText ;
     TextToSpeech tts ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,19 +31,35 @@ public class ViewWord extends ActionBarActivity {
 
         FROM_word = (TextView) findViewById(R.id.EN_word);
         TO_word = (TextView) findViewById(R.id.AR_word);
-        DESC_word = (TextView) findViewById(R.id.DESC_word);
-        fromSpeak = (Button) findViewById(R.id.FROM_speak);
-        toSpeak = (Button) findViewById(R.id.TO_speak);
-        descSpeak = (Button) findViewById(R.id.DESC_speak);
+        fromCopy = (Button) findViewById(R.id.FROM_COPY);
+        toCopy = (Button) findViewById(R.id.TO_COPY);
         Intent intent = getIntent();
         FromText = intent.getStringExtra("FromText");
         ToText = intent.getStringExtra("ToText");
-        descText = intent.getStringExtra("descText");
         FROM_word.setText(FromText);
         TO_word.setText(ToText);
-        DESC_word.setText(descText);
 
+        final ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
 
+        fromCopy.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NewApi")
+            @Override
+            public void onClick(View v) {
+                clipboardManager.setText(FromText);
+                Toast.makeText(getBaseContext(), "Copied to clipboard", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        toCopy.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NewApi")
+            @Override
+            public void onClick(View v) {
+                clipboardManager.setText(ToText);
+                Toast.makeText(getBaseContext(), "Copied to clipboard" , Toast.LENGTH_SHORT).show();
+            }
+        });
+
+/*
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -57,7 +75,7 @@ public class ViewWord extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-                tts.setSpeechRate(0.7f);
+                tts.setSpeechRate(1.0f);
                 tts.speak(FromText , TextToSpeech.QUEUE_FLUSH , null);
             }
         });
@@ -65,37 +83,16 @@ public class ViewWord extends ActionBarActivity {
         toSpeak.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tts.setSpeechRate(0.7f);
+                tts.setSpeechRate(1.0f);
                 tts.speak(ToText , TextToSpeech.QUEUE_FLUSH , null);
             }
         });
 
-        descSpeak.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tts.setSpeechRate(0.7f);
-                tts.speak(descText , TextToSpeech.QUEUE_FLUSH , null);
-            }
-        });
 
-
-
+*/
 
     }
-
-
-
-
-    public static boolean isProbablyArabic(String s) {
-        for (int i = 0; i < Character.codePointCount(s, 0, s.length()); i++) {
-            int c = s.codePointAt(i);
-            if (c >= 0x0600 && c <=0x06E0)
-                return true;
-        }
-        return false;
-    }
-
-
+/*
 
     @Override
     public void onPause(){
@@ -105,7 +102,7 @@ public class ViewWord extends ActionBarActivity {
         }
         super.onPause();
     }
-
+*/
 
 
     @Override

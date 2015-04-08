@@ -33,13 +33,13 @@ public class ExternalDatabaseHelper extends SQLiteOpenHelper{
     public void createDataBase() throws IOException {
         boolean dbExist = checkDataBase();
         if (dbExist) {
-            Log.e("exist", "Data base Exist ");
+            Log.e("exist", "Data base Exist # # # # # # # # # # #");
         }else{
             this.getReadableDatabase();
             try {
                 copyDataBase();
             }catch (IOException e){
-                throw new Error("Error Coping Data Base ");
+                throw new Error("Error Coping Data Base !!!!!!");
             }
         }
 
@@ -47,7 +47,7 @@ public class ExternalDatabaseHelper extends SQLiteOpenHelper{
 
     private boolean checkDataBase() {
         File dbFile = new File(DB_PATH+DB_NAME);
-        Log.e("2","Check Data Base Done ... ");
+        Log.e("2","Check Data Base Done ... ###############");
         return dbFile.exists();
 
     }
@@ -70,19 +70,19 @@ public class ExternalDatabaseHelper extends SQLiteOpenHelper{
     public void openDB()  {
         String myPath = DB_PATH + DB_NAME ;
         db = SQLiteDatabase.openDatabase(myPath,null,SQLiteDatabase.OPEN_READWRITE);
-        Log.i("openDB ....", "DatBase is Open");
+        Log.i("openDB ....", "DatBase is Open # # # # # # # # # # # #");
     }
 
 
     public Cursor getArabicData(String[] args){
         db = getReadableDatabase();
-        String[] columns = {"en","ar","desc"};
+        String[] columns = {"en","ar"};
         Cursor cursor = db.query("accounting",columns, "en = ?", args ,null,null,null);
         return cursor;
     }
     public Cursor getEnglishData(String[] args){
         db = getReadableDatabase();
-        String[] columns = {"en","ar","desc"};
+        String[] columns = {"en","ar"/*,"desc"*/};
         Cursor cursor = db.query("accounting",columns, "ar = ?", args ,null,null,null);
         return cursor;
     }

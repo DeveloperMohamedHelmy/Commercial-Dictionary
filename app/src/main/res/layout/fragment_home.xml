@@ -50,20 +50,6 @@
                 android:visibility="gone"
                 android:windowSoftInputMode="adjustNothing"/>
 
-            <EditText
-                android:editable="false"
-                android:id="@+id/DescEditText"
-                style="@style/editText_style"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="10dp"
-                android:visibility="gone"
-                android:background="@drawable/edit_text_bg"
-                android:isScrollContainer="false"
-
-                android:windowSoftInputMode="adjustNothing"
-
-                />
             <Button
                 android:windowSoftInputMode="adjustNothing"
                 android:id="@+id/translateButton"
@@ -74,7 +60,8 @@
                 android:background="@drawable/translatebtn_background"
                 android:isScrollContainer="false"
                 android:layout_marginBottom="4dp"
-                android:text="Translate" />
+                android:text="Translate"
+                android:textSize="20sp"/>
 
         </LinearLayout>
     </LinearLayout>
